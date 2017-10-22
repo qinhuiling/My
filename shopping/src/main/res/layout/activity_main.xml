@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bwie.asus.shopping.MainActivity">
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape"
+        >
+
+        <TextView
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="购物车(0)"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            />
+
+        <TextView
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="编辑"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        >
+        
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff"
+        >
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="全选"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/heji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计:"
+                android:textSize="20sp"
+                android:textColor="#A3A5A7"
+                />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_toRightOf="@+id/heji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0"
+                android:textSize="20sp"
+                android:textColor="#FFA173"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/jiesuan"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="结算(0)"
+            android:textSize="20sp"
+            android:textColor="#FFD4B1"
+            android:textStyle="bold"
+            android:background="@drawable/shape"
+            />
+
+    </LinearLayout>
+    
+</RelativeLayout>

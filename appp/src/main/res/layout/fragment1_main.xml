@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bwie.taobao.MainActivity"
+    >
+    <LinearLayout
+        android:id="@+id/shouye_head"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:background="@drawable/jianbian"
+        >
+        <ImageView
+            android:id="@+id/pic_saoyisao"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/f1_saoyisao"
+            android:layout_gravity="center_vertical"
+            />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="40dp"
+            android:layout_gravity="clip_vertical">
+            <ImageView
+                android:id="@+id/sousuo_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/f1_sousuo"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                />
+            <ImageView
+                android:id="@+id/pic_xiangji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/f1_xiangji"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+            <EditText
+                android:id="@+id/sousuo_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="      回家吃饭"
+                android:textSize="15sp"
+                android:layout_centerVertical="true"
+                android:theme="@style/MyEditText"
+                android:textColorHint="#fff"
+                android:focusable="false"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/pic_address"
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/f1_huiyuanma"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"></android.support.v7.widget.RecyclerView>
+    </com.yalantis.phoenix.PullToRefreshView>
+
+
+</LinearLayout>

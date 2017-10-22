@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bwie.taobao.MainActivity"
+    android:background="#fff"
+    >
+    <RelativeLayout
+        android:id="@+id/hunt_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        >
+        <ImageView
+            android:id="@+id/hunt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back"/>
+        <EditText
+            android:id="@+id/hunt_ed"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/hunt_back"
+            android:background="@null"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/android_icon_camera"
+            android:layout_toLeftOf="@+id/hunt_sousuo"
+            />
+        <TextView
+            android:id="@+id/hunt_sousuo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   搜索   "
+            android:textColor="#fff"
+            android:background="@drawable/circle"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:textSize="24dp"
+            />
+    </RelativeLayout>
+        <TextView
+            android:id="@+id/hunt_tv_lishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史搜索"
+            android:layout_below="@+id/hunt_head"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+    <ListView
+        android:id="@+id/hunt_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#fff"
+        android:background="#fff"
+        android:layout_below="@+id/hunt_tv_lishi"
+        />
+    <Button
+        android:id="@+id/hunt_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清空历史记录"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
